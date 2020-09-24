@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CardView<Content: View>: View {
+public struct CardView<Content: View>: View {
     var content: () -> Content
     
     init(@ViewBuilder content: @escaping () -> Content) {
