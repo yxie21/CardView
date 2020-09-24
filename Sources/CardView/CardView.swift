@@ -3,11 +3,11 @@ import SwiftUI
 public struct CardView<Content: View>: View {
     var content: () -> Content
     
-    init(@ViewBuilder content: @escaping () -> Content) {
+    public init(@ViewBuilder content: @escaping () -> Content) {
         self.content = content
     }
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             Color.gray
                 .clipShape(RoundedRectangle(cornerRadius: 25.0))
@@ -15,7 +15,6 @@ public struct CardView<Content: View>: View {
             VStack {
                 self.content()
             }.padding()
-            
         }
     }
 }
