@@ -5,7 +5,8 @@ public struct CardView<Content: View>: View {
     var content: () -> Content
     var color: Color
     
-    public init(color: Color = Color.gray, @ViewBuilder content: @escaping () -> Content) {
+    public init(
+        color: Color = Color.gray, @ViewBuilder content: @escaping () -> Content) {
         self.content = content
         self.color = color
     }
